@@ -10,7 +10,7 @@
           <a class="nav-link active text-white" aria-current="page" href="index.php">รายการสินค้า</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">ตะกร้าสินค้า</a>
+          <a class="nav-link text-white" href="cart.php">ตะกร้าสินค้า</a>
         </li>
       </ul>
     </div>

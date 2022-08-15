@@ -1,19 +1,22 @@
 <?php
-session_start();
-require 'connect.php';
-$meSql = "SELECT * FROM products ";
-$meQuery = $con->query($meSql);
- 
-$action = isset($_GET['a']) ? $_GET['a'] : "";
-$itemCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
-if(isset($_SESSION['qty'])){
-$meQty = 0;
-foreach($_SESSION['qty'] as $meItem){
-$meQty = $meQty + $meItem;
-}
-}else{
-$meQty=0;
-}
+    session_start();
+    require 'connect.php';
+    $meSql = "SELECT * FROM products ";
+    $meQuery = $con->query($meSql);
+    
+    $action = isset($_GET['a']) ? $_GET['a'] : "";
+    $itemCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+    if(isset($_SESSION['qty']))
+    {
+        $meQty = 0;
+        foreach($_SESSION['qty'] as $meItem){
+        $meQty = $meQty + $meItem;
+        }
+    }
+    else
+    {
+        $meQty=0;
+    }
 ?>
 
 <!doctype html>
@@ -21,7 +24,7 @@ $meQty=0;
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
