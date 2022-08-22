@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a class="nav-link text-white" href="cart.php">ตะกร้าสินค้า</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="order.php">รายการสั่งซื้อ</a>
+        </li>
       </ul>
     </div>
   </div>
