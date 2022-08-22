@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    if(isset($_SESSION['qty']))
+    {
+        $meQty = 0;
+        foreach($_SESSION['qty'] as $meItem){
+        $meQty = $meQty + $meItem;
+        }
+    }
+    else
+    {
+        $meQty=0;
+    }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,7 +46,7 @@
                     <tr>
                         <td><?php echo $i;$i++;?></td>
                         <td><?php echo $row['id']?></td>
-                        <td><?php echo $row['order_date']?></td>
+                        <td><?php echo date_th($row['order_date'])?></td>
                         <td><?php echo $row['order_fullname']?></td>
                         <td><?php echo $row['order_phone']?></td>
                     </tr>
